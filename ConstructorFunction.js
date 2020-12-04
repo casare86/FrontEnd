@@ -150,3 +150,92 @@
 // const htmlArray = htmlText.split("div");
 // const novoHtml = htmlArray.join("section"); //troca as div por section no htmlText
  
+const person = new Object({
+    name: "Fernando"
+});
+const car = {
+    brand: "Model",
+    wheels: 4,
+    //methods
+    init(value){ //constructor
+        this.brand = value;
+        return this;
+    },
+    acelerate(){
+        return this.brand + " acellerates";
+    },
+    honk(){
+        return this.brand + "honks";
+    }
+}
+const honda = Object.create(car).init("Honda"); 
+//honda.brand = "Honda";
+console.log(honda.acelerate());
+
+//using generic methods (heritage like)
+const functionVehicles = {
+    break() {
+        return "Activating breaks";
+    },
+    fuel(){
+        return "Fuel is empty";
+    }
+}
+
+const bike = {
+    helmet: true,
+}
+Object.assign(bike, functionVehicles);
+Object.assign(car, functionVehicles);
+console.log(bike.fuel());
+console.log(car.break());
+
+//defining Properties
+Object.defineProperties(bike, {
+    helmet:{
+        value: true, //if using get/set can´t use value
+        configurable: false, //prevent deletion of attribute
+        writable: true, //value can be changed
+        enumerable: true, //torna enum
+    }
+});
+delete bike.wheels; //wont work since its not condigurable
+
+//get and set
+Object.defineProperties(bike, {
+    wheels:{
+        get: function(){ //get(){}
+            return this._wheels;
+        },
+        set(value){
+            this._wheels = value * 4;
+        }
+    }
+});
+
+Object.getOwnPropertyNames(Array)
+Object.getOwnPropertyNames(Array.prototype); 
+
+//Object.method //only exibit if the property os enumerable: true
+console.log(Object.keys(bike)); //properties
+console.log(Object.values(bike)); //properties values
+console.log(Object.entries(bike)); //object structure
+console.log(Object.getOwnPropertyNames(Array));//get enumerable: false as well
+
+Object.is(honda, car); //use pointers as reference so even an object with same attributes will be false unless they have the same address
+Object.freeze(honda); //make the object static
+Object.seal(honda); //prevend new properties/delete but allow value changes
+Object.preventExtensions(honda);//wont allow new propertis but can be deletec
+console.log(Object.isFrozen(honda));
+console.log(Object.isExtensible(honda));//if seald false
+console.log(Object.isSealed(car));
+//hasOwnProperty check if the property is from the object or from prototype
+console.log(car.hasOwnProperty('honk'));
+console.log(car.hasOwnProperty('map'));
+const fruits = ['Banana', 'Straberry']
+//fruits receive a protpotype of array
+console.log(Array.prototype.isPrototypeOf(fruits));
+
+//checking the object type using toString
+Object.prototype.toString.call(fruits);
+
