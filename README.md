@@ -1,2 +1,2 @@
-# FrontEnd
-Cursos e Aulas dedicadas a Front- End
+# FrontEnd - JS
+Cursos e Aulas dedicadas a Javascript
