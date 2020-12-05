@@ -1,3 +1,5 @@
+@import "modal.css";
+
 body,
 h1,
 h2,
@@ -23,8 +25,15 @@ body {
   background-color: #e7e7e7;
   color: #222;
   -webkit-font-smoothing: antialiased;
+}
+.grid-container {
   display: grid;
   grid-template-columns: 1fr 160px minmax(300px, 800px) 1fr;
+}
+
+[data-color^="blue"] {
+  background: blue;
+  color: white;
 }
 
 .enhanceText {
@@ -177,7 +186,7 @@ body {
   font-weight: bold;
 }
 @media (max-width: 700px) {
-  body {
+  .grid-container {
     grid-template-columns: 1fr;
   }
   .menu,
