@@ -7,20 +7,17 @@ import initTabNav from "./Modules/tabnav.js";
 //import { test } from "./Modules/functions.js";
 import * as myLib from "./Modules/functions.js";
 import initModal from "./Modules/modal.js";
+import initDropDownMenu from "./Modules/dropDownMenu.js";
+import initMenuMobile from './Modules/menuMobile.js';
 
 //console.log(myLib.test(), myLib.test2()); //undefined undefined since these functions dont have a return
 myLib.test();
 myLib.test2();
 console.log(myLib.permitAccess, myLib.someInfo);
 initModal();
-
-
-
 initSmoothScroll();
 initAnimateScroll();
 initAccordion();
 initTabNav();
-
-
-
-
+initDropDownMenu();
+initMenuMobile();

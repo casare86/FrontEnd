@@ -19,14 +19,26 @@
 	</head>
 	<body>
 		<div class="grid-container">
-			<nav class="menu js-menu" id="navBar">
-				<ul>
+			<nav class="menu js-menu" data-menu="smooth" id="navBar">
+				<button data-menu="button" aria-expanded="false" aria-controls="menu">Menu</button>
+				<ul data-menu="list" id="menu">
 					<li><a href="#cars"> Cars </a></li>
+					<li data-dropdown>
+						<a href="aboutUs.html">Known Us</a>
+						<ul class="dropdown-menu">
+							<li><a href="company.html">Our Company</a></li>
+							<li><a href="ourTeam.html">Our Team</a></li>
+							<li><a href="partners.html">Partnership </a></li>
+							<li><a href="investitors.html">Investitors</a></li>
+						</ul>
+					</li>
+
 					<li><a href="#faq"> FAQ </a></li>
 					<li><a href="#contact"> Contact</a></li>
 					<li><a data-modal="open" href="login.html"> Login </a></li>
 				</ul>
 			</nav>
+			<section id="aboutUs"></section>
 			<section class="grid-section cars js-scroll" id="cars">
 				<h1 class="title">Fine Cars</h1>
 				<ul class="cars-list js-tabMenu"></ul>
