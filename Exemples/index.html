@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JS Examples - 1</title>
+	</head>
+	<body>
+		<form name="contact" id="contact">
+			<label for="name"> Name </label>
+			<input type="text" name="nome" id="nome" required />
+			<label for="email"> Email </label>
+			<input type="email" name="email" id="email" required />
+			<span class="error"></span>
+
+			<label for="message"> Message </label>
+			<textarea type="message" name="message" id="message"></textarea>
+
+			<label for="color"> Color </label>
+			<input type="color" name="color" id="color" />
+			<!-- range goes from 0 to 100 -->
+			<label for="range"> Range </label>
+			<input type="range" />
+
+			<label for="number"> Number </label>
+			<input type="number" />
+			<label for="date"> Date</label>
+			<input type="date" />
+			<label for="password"> Password </label>
+			<input type="password" />
+		</form>
+		<span class="text"></span>
+		<!-- <script src="dateObject.js"></script> -->
+		<script src="requiredValidation.js"></script>
+		<style>
+			.invalid {
+				border-color: red;
+			}
+		</style>
+	</body>
+</html>

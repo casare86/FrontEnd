@@ -9,6 +9,8 @@ import * as myLib from "./Modules/functions.js";
 import initModal from "./Modules/modal.js";
 import initDropDownMenu from "./Modules/dropDownMenu.js";
 import initMenuMobile from './Modules/menuMobile.js';
+import initNumbersAnimation from './Modules/numbersAnimation.js';
+import initWorkingHour from './Modules/dateObject.js';
 
 //console.log(myLib.test(), myLib.test2()); //undefined undefined since these functions dont have a return
 myLib.test();
@@ -21,3 +23,5 @@ initAccordion();
 initTabNav();
 initDropDownMenu();
 initMenuMobile();
+initNumbersAnimation();
+initWorkingHour();

@@ -10,6 +10,8 @@ export default function initAnimateScroll(){
                 const isSectionVisible = (sectionTop - (windowHeight * 0.6)) < 0;
                 if(isSectionVisible)
                     section.classList.add(activeClass);
+                else if (section.classList.contains(activeClass))
+                    section.classList.remove(activeClass);
             });
         }
         animateScroll();

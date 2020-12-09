@@ -1,0 +1,49 @@
+body {
+	margin: 0px;
+	background-color: #ccc;
+}
+label {
+	display: block;
+	margin-bottom: 0.5rem;
+	margin-top: 1rem;
+}
+input {
+	display: block;
+}
+.button-creator {
+	margin-left: 20px;
+	width: 300px;
+}
+.btn-creator {
+	display: grid;
+	grid-gap: 30px;
+	padding: 20px;
+	grid-template-columns: 200px 1fr;
+}
+#controles {
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 0.875rem;
+	background: #eee;
+	border-radius: 4px;
+	box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1);
+	padding: 10px 0px;
+}
+section {
+	margin: 10px 20px;
+}
+#controles input,
+label,
+select {
+	margin-left: 20px;
+}
+.css {
+	font-family: 'IBM Plex Mono', monospace;
+	color: #333;
+	margin-top: 40px;
+	display: flex;
+	flex-direction: column;
+}
+.css span {
+	display: flexbox;
+	margin-bottom: 0.05rem;
+}

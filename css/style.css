@@ -2,7 +2,7 @@
 @import 'tooltip.css';
 @import 'dropDownMenu.css';
 @import 'menuMobile.css';
-
+@import 'numbers.css';
 body,
 h1,
 h2,
@@ -275,4 +275,21 @@ body {
 .js .js-scroll.active {
 	opacity: 1;
 	transform: translate3d(0, 0, 0);
+}
+
+[data-week]::after {
+	display: inline-block;
+	content: '';
+	width: 9px;
+	height: 9px;
+
+	border-radius: 50%;
+	margin-left: 4px;
+	border: 1px solid #000;
+}
+[data-week].working::after {
+	background: lightgreen;
+}
+[data-week].closed::after {
+	background: red;
 }
